@@ -31,7 +31,7 @@ void proxy()
 
     cin.clear();
 
-    freopen("server.yaml","r",stdin);
+    freopen("server_out.yaml","r",stdin);
     while(getline(cin,t))
     {
         if(t.find("name")!=t.npos&&t.find("server")!=t.npos)
@@ -147,7 +147,7 @@ int main()
     fclose(stdout);
     system("cat rule.yaml >> out.yaml");
 
-    freopen("server.yaml","w",stdout);
+    freopen("server_out.yaml","w",stdout);
         for(int i=1;i<=n;i++)
             cout<<s[i]<<endl;
     fclose(stdout);

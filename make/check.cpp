@@ -5,7 +5,7 @@ string s[10000];
 int n;
 int main()
 {
-    freopen("source","r",stdin);
+    freopen("source.yaml","r",stdin);
     string t;
     while(getline(cin,t))
     {
@@ -21,7 +21,7 @@ int main()
             getline(cin,s[i]);
     fclose(stdin);
 
-    freopen("server.yaml","w",stdout);
+    freopen("server_out.yaml","w",stdout);
         for(int i=1;i<=n;i++)
             if(flag[i])
                 cout<<s[i]<<endl;
