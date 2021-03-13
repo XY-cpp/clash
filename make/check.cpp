@@ -26,5 +26,6 @@ int main()
             if(flag[i])
                 cout<<s[i]<<endl;
     fclose(stdout);
+
     return 0;
 }

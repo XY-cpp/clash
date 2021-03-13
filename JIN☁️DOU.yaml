@@ -1,7 +1,7 @@
 #---------------------------------------------------#
-## 更新：2021-03-13 02:58:55
+## 更新：2021-03-13 02:58:54
 ## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
-## 链接：https://dingyue.space/link/G2SluRFodTYKHhDZ?clash=1
+## 链接：https://sdf15612wefcs.xyz/link/tn6l2YlppnvSyvsN?clash=1
 #---------------------------------------------------#
 
 # HTTP 代理端口
@@ -17,7 +17,7 @@ redir-port: 7892
 allow-lan: true
 
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
-mode: rule
+mode: Rule
 
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
@@ -33,17 +33,13 @@ secret: ''
 # external-ui: folder
 
 
-proxies:
-  - {"name":"v0丨免费丨台湾01丨KuLi云官网:https://ooolooo.vip","type":"vmess","server":"tw02.kuli888.xyz","port":80,"uuid":"0e0c5d74-f114-3fb2-a0cb-baf8ebdd4b2a","alterId":1,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"www.bing.com"}}
-  - {"name":"v0丨免费丨台湾02丨KuLi云官网:https://ooolooo.vip","type":"vmess","server":"tw.kuli888.xyz","port":35358,"uuid":"0e0c5d74-f114-3fb2-a0cb-baf8ebdd4b2a","alterId":1,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"www.bing.com"}}
+Proxy:
 
-proxy-groups:
+Proxy Group:
 -
   name: Proxy
   type: select
-  proxies:
-    - 'v0丨免费丨台湾01丨KuLi云官网:https://ooolooo.vip'
-    - 'v0丨免费丨台湾02丨KuLi云官网:https://ooolooo.vip'
+  proxies: {  }
 -
   name: Domestic
   type: select
@@ -70,7 +66,7 @@ proxy-groups:
 
 
 # 规则
-rules:
+Rule:
 # (GlobalTV)
 # > ABC
 - DOMAIN-SUFFIX,edgedatg.com,GlobalTV

@@ -4,34 +4,8 @@ int n;
 string s[10000];
 void proxy()
 {
-    string t="a.yaml";
-    cin>>t;
-    if(t.find("http")!=t.npos)
-    {
-        t="curl "+t+" > a.yaml";
-        system(t.c_str());
-        t="a.yaml";
-    }
+    string t="server_out.yaml";
     freopen(t.c_str(),"r",stdin);
-    while(getline(cin,t))
-    {
-        if(t.find("name")!=t.npos&&t.find("server")!=t.npos)
-        {
-            s[++n]=t;
-            for(int j=0;j<s[n].length();j++)
-                if(s[n][j]==',')
-                {
-                    s[n]=s[n].substr(j+1);
-                    break;
-                }
-        }
-    }
-    fclose(stdin);
-    system("rm -rf a.yaml");
-
-    cin.clear();
-
-    freopen("server_out.yaml","r",stdin);
     while(getline(cin,t))
     {
         if(t.find("name")!=t.npos&&t.find("server")!=t.npos)
@@ -146,11 +120,6 @@ int main()
     print();
     fclose(stdout);
     system("cat rule.yaml >> out.yaml");
-
-    freopen("server_out.yaml","w",stdout);
-        for(int i=1;i<=n;i++)
-            cout<<s[i]<<endl;
-    fclose(stdout);
 
     system("cp out.yaml ../local.yaml;rm out.yaml");
     return 0;
